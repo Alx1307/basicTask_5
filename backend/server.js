@@ -32,7 +32,7 @@ app.post('/login', (req, res) => {
     const user = users.find(u => u.username === username && u.password === password);
 
     if (user) {
-        const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '30s' });
+        const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.json({ token });
     } else {
         res.status(401).json({ message: 'Invalid credentials' });
