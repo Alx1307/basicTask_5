@@ -5,6 +5,7 @@
 Установить зависимости: npm install
 
 Запустить сервер: cd backend
+
                   node server.js
                   
 Открыть файл index.html в браузере
